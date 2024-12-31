@@ -58,7 +58,7 @@ function App() {
               <h2>
                 {weatherData ? weatherData.name : "--"}
                 <br />
-                <small>May 24, 2016</small>
+                <small>{new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });}</small>
               </h2>
               <p className="h3">
                 <i className="wi wi-day-hail"></i>{" "}
