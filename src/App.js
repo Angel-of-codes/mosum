@@ -4,6 +4,7 @@ function App() {
   const [city, setCity] = useState("");
   const [weatherData, setWeatherData] = useState(null);
   const API_KEY = "c3d92766e978b9a239ef9ca9ce3cdf51";
+  const tDate = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
 
   const fetchWeather = async () => {
     if (!city) {
@@ -58,7 +59,7 @@ function App() {
               <h2>
                 {weatherData ? weatherData.name : "--"}
                 <br />
-                <small>{new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });}</small>
+                <small>{tDate}</small>
               </h2>
               <p className="h3">
                 <i className="wi wi-day-hail"></i>{" "}
